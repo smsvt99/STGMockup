@@ -34,8 +34,8 @@
   </nav>
 
   <!-- Masthead -->
-  <header class="masthead text-white text-center">
-    <div style="background-color: rgba(0,0,0,.6); padding-bottom: 100px; padding-top: 100px;">
+  <header class="masthead text-white text-center" style="padding-bottom:0; padding-top:70px;">
+    <div style="background-color: rgba(0,0,0,.6); padding-bottom: 200px; padding-top: 200px;">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -104,7 +104,7 @@
       <div class="row">
           
           <div class="col-lg-4">
-              <a href="#corporateAccounts" style="text-decoration: none;" class="nav-link js-scroll-trigger active">
+              <a href="#corporateAccounts" style="text-decoration: none;" class="nav-link">
               <div class="features-icons-item mx-auto mb-0 mb-lg-3">
                 <div class="features-icons-icon d-flex">
                   <i class="icon-check m-auto text-primary"></i>
@@ -118,7 +118,7 @@
           
 
         <div class="col-lg-4">
-            <a href="#workBench" style="text-decoration: none;" class="smooth-scroll">
+            <a href="#workBench" style="text-decoration: none;" class="nav-link">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
             <div class="features-icons-icon d-flex">
               <i class="icon-briefcase m-auto text-primary"></i>
@@ -131,7 +131,7 @@
         </div>
 
         <div class="col-lg-4">
-            <a href="#onlineAccess" style="text-decoration: none;">
+            <a href="#onlineAccess" style="text-decoration: none;" class="nav-link">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
                 <i class="icon-screen-desktop m-auto text-primary"></i>
@@ -412,6 +412,16 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+  
+  $('.test, .nav-link, .navbar-brand, .new-button').click(function() {
+    var sectionTo = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(sectionTo).offset().top
+    }, 750);
+});
+  
+  </script>
 
 </body>
 
