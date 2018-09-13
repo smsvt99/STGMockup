@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Landing Page - Start Bootstrap Theme</title>
+  <title>Standards Central</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-light bg-light static-top">
+  <nav class="navbar navbar-light bg-light static-top" style="position: fixed; background-color: white; z-index: 2; width: 100%;">
     <div class="container">
       <a class="navbar-brand" href="#"><img src='img/logo.png'></a>
       <a class="btn btn-primary" href="#">Log in/ Register</a>
@@ -35,6 +35,7 @@
 
   <!-- Masthead -->
   <header class="masthead text-white text-center">
+    <div style="background-color: rgba(0,0,0,.6); padding-bottom: 100px; padding-top: 100px;">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -57,80 +58,96 @@
         </div>
       </div>
     </div>
+    </div>
   </header>
 
+  <section class="showcase">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <div class="col-lg-8 order-lg-1 my-auto showcase-text" style="padding-top: 100px; padding-bottom: 50px;">
+            <h2>FEATURED PUBLISHERS</h2>
+            <p class="lead mb-0">Our expanding set of libraries include these organizations:</p>
+            <ul class="lead mb-0">
+              <li>
+                <a href ='#'><b>AAMI</b></a> Association for the Advancement of Medical Instrumentation</li>
+              <li>
+                  <a href ='#'><b>AHRI</b></a> Air-Conditioning Heating and Refrigeration Institute</li>
+              <li>
+                  <a href ='#'><b>AMT</b></a> Association of Manufacturing Technology</li>
+              <li>
+                  <a href ='#'><b>ASA</b></a> Acoustical Society of America</li>
+              <li>
+                  <a href ='#'><b>ASTM</b></a> American Society for Testing and Materials</li>
+              <li>
+                  <a href ='#'><b>IEC</b></a> International Electrotechnical Commission</li>
+              <li>
+                  <a href ='#'><b>ISO</b></a> International Standards Organization</li>
+              <li>
+                  <a href ='#'><b>OLA</b></a> Optical Laboratories Association</li>
+              <li>
+                  <a href ='#'><b>OPEI</b></a> Outdoor Power Equipment Institute</li>
+              <li>
+                  <a href ='#'><b>DoD</b></a> US Department of Defense (DC)</li>
+              <li>
+                  <a href ='#'><b>USDoD</b></a> US Department of Defense</li>
+              <li>
+                  <a href ='#'><b>USOFR</b></a> US Office of the Federal Register</li>
+            </ul>
+          </div>
+          <img src="img/lab.jpg" class="col-lg-3 order-lg-2 rounded-circle" style="height:50%; width:50%; margin-top: 14%;"></img>
+        </div>
+      </section>
+
   <!-- Icons Grid -->
-  <section class="features-icons bg-light text-center">
+  <section class="features-icons bg-light text-center" style="padding-top: 15px; padding-bottom: 15px;">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-screen-desktop m-auto text-primary"></i>
+          
+          <div class="col-lg-4">
+              <a href="#corporateAccounts" style="text-decoration: none;" class="nav-link js-scroll-trigger active">
+              <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                <div class="features-icons-icon d-flex">
+                  <i class="icon-check m-auto text-primary"></i>
+                </div>
+                <h3 style="color: black">Corporate Accounts</h3>
+                <p class="lead mb-0">Contact our Corporate Solutions Team to help you build custom multi-user, multi-location accounts. Select only
+                  the documents each location needs and keep track of usage with online reports.</p>
+              </div>
+            </a>
             </div>
-            <h3>Online Access</h3>
-            <p class="lead mb-0">Immediate online access - View, download and print as needed and allowed. We provide access to the world's standards
-              and regulatory organizations.</p>
-          </div>
-        </div>
+          
+
         <div class="col-lg-4">
+            <a href="#workBench" style="text-decoration: none;" class="smooth-scroll">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
             <div class="features-icons-icon d-flex">
               <i class="icon-briefcase m-auto text-primary"></i>
             </div>
-            <h3>Your Workbench</h3>
+            <h3 style="color: black">Your Workbench</h3>
             <p class="lead mb-0">Feature rich online viewer, User annotations, Change notice alerts, PDF download/print, Metrics reports, Version
               history, Custom favorites/collections and more!</p>
           </div>
+          </a>
         </div>
+
         <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-check m-auto text-primary"></i>
+            <a href="#onlineAccess" style="text-decoration: none;">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-screen-desktop m-auto text-primary"></i>
+              </div>
+              <h3 style="color: black">Online Access</h3>
+              <p class="lead mb-0">Immediate online access - View, download and print as needed and allowed. We provide access to the world's standards
+                and regulatory organizations.</p>
             </div>
-            <h3>Corporate Accounts</h3>
-            <p class="lead mb-0">Contact our Corporate Solutions Team to help you build custom multi-user, multi-location accounts. Select only
-              the documents each location needs and keep track of usage with online reports.</p>
+            <div id="corporateAccounts"></div>
+
           </div>
-        </div>
+        
       </div>
     </div>
   </section>
-
-  <!-- Image Showcases -->
-  <section class="showcase">
-    <div class="container-fluid p-0">
-      <div class="row no-gutters" style="margin-bottom: 30px;">
-        <div class="col-lg-8 order-lg-1 my-auto showcase-text">
-          <ul class="lead mb-0">
-            <li>
-              <a href ='#'><b>AAMI</b></a> Association for the Advancement of Medical Instrumentation</li>
-            <li>
-                <a href ='#'><b>AHRI</b></a> Air-Conditioning Heating and Refrigeration Institute</li>
-            <li>
-                <a href ='#'><b>AMT</b></a> Association of Manufacturing Technology</li>
-            <li>
-                <a href ='#'><b>ASA</b></a> Acoustical Society of America</li>
-            <li>
-                <a href ='#'><b>ASTM</b></a> American Society for Testing and Materials</li>
-            <li>
-                <a href ='#'><b>IEC</b></a> International Electrotechnical Commission</li>
-            <li>
-                <a href ='#'><b>ISO</b></a> International Standards Organization</li>
-            <li>
-                <a href ='#'><b>OLA</b></a> Optical Laboratories Association</li>
-            <li>
-                <a href ='#'><b>OPEI</b></a> Outdoor Power Equipment Institute</li>
-            <li>
-                <a href ='#'><b>DoD</b></a> US Department of Defense (DC)</li>
-            <li>
-                <a href ='#'><b>USDoD</b></a> US Department of Defense</li>
-            <li>
-                <a href ='#'><b>USOFR</b></a> US Office of the Federal Register</li>
-          </ul>
-        </div>
-        <img src="img/lab.jpg" class="col-lg-3 order-lg-2 rounded-circle" style="height:50%; width:50%; margin-top: 12%;"></img>
-      </div>
+  <section class="showcase" style="margin-top: 50px; margin-bottom: 15px;">
       <div class="row no-gutters">
         <div class="col-lg-1 text-white showcase-img"></div>
         <div class="col-lg-10 my-auto showcase-text" style="border: 5px solid rgb(66,139,202); border-radius: 30px; padding-top: 30px; padding-bottom: 30px">
@@ -168,7 +185,7 @@
         <div class="col-lg-1 text-white showcase-img"></div>
       </div>
 
-      <div class="row no-gutters">
+      <div id="workBench" class="row no-gutters">
         <div class="col-lg-12 order-lg-1 my-auto showcase-text">
           <h2>Your Online Workbench</h2>
           <p class="lead mb-0">
@@ -191,7 +208,8 @@
             Open as many documents as you wish, each in a new tab with a feature rich built in viewer. Then, if you wish download and
             or print just the documents you want in PDF format. Our navigator allows you to build collections of material
             across publishers and remember your collections from session to session.</p>
-        </div>
+            <div id="onlineAccess"></div>
+          </div>
       </div>
       <div class="row no-gutters">
         <div class="col-lg-1 text-white showcase-img"></div>
@@ -218,6 +236,7 @@
       <div class="col-lg-1 text-white" style="margin-bottom: 100px" ></div>
     </div>
   </section>
+  
   <div class="container" style="margin-bottom: 100px">
     <div class="row no-gutters">
       <div class="col-lg-1"></div>
