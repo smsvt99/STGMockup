@@ -154,9 +154,9 @@
       </div>
     </div>
   </section>
-  <section class="showcase" style="margin-top: 50px; margin-bottom: 15px;">
-      <div class="row no-gutters">
-        <div class="col-lg-1 text-white showcase-img"></div>
+  <section class="showcase" style="margin-top: 5px; margin-bottom: 15px;">
+      <div class="row">
+        <div class="col-lg-1 text-white showcase-img spacer"></div>
         <div class="col-lg-10 my-auto showcase-text" style="border: 5px solid rgb(66,139,202); border-radius: 30px; padding-top: 30px; padding-bottom: 30px">
           <h2>Corporate Subscriptions</h2>
           <p class="lead mb-0">
@@ -189,7 +189,7 @@
             or two to get your quote ready for you. Then, it’s like any other Document Center service – authorize your purchase
             with a purchase order or credit card.</p>
         </div>
-        <div class="col-lg-1 text-white showcase-img"></div>
+        <div class="col-lg-1 text-white showcase-img spacer"></div>
       </div>
 
       <div id="workBench" class="row no-gutters">
@@ -224,7 +224,7 @@
 
 
       <div class="row no-gutters">
-        <div class="col-lg-1 text-white showcase-img"></div>
+        <div class="col-lg-1 text-white showcase-img spacer"></div>
         <div class="col-lg-10 order-lg-1 my-auto showcase-text" style="border: 5px solid rgb(66,139,202); border-radius: 30px; padding-top: 30px; padding-bottom: 30px">
           <h2>Immediate Online Viewing</h2>
           <p class="lead mb-0">
@@ -245,13 +245,13 @@
           </p>
         </div>
       </div>
-      <div class="col-lg-1 text-white" style="margin-bottom: 100px" ></div>
+      <div class="col-lg-1 text-white spacer" style="margin-bottom: 100px" ></div>
     </div>
   </section>
   
   <div class="container" style="margin-bottom: 100px">
     <div class="row no-gutters">
-      <div class="col-lg-1"></div>
+      <div class="col-lg-1 spacer"></div>
         <div class="col-lg-10">
           <h2>SUBSCRIPTION PUBLISHERS</h2>
           <p>Our Corporate Solutions Team can provide access to these additional organizations:</p>
@@ -344,7 +344,7 @@
           </table>
         </div>
       </div>
-<div class="col-lg-1"></div>
+<div class="col-lg-1 spacer"></div>
 </div>
 
   <!-- Call to Action -->
@@ -424,17 +424,26 @@
   <script>
   
   $(window).on("resize", function(){
-   
+    respond()
+  })
+  $(document).ready(function(){
+    respond()
+  })
+
+  function respond(){
     if ($(window).width() < 1000){
       $('#lab').css("display","none")
       $('#computer').css("display","none")
       // $('.word').css("fontSize", "5vw")
+      $(".spacer").css("display", "none")
    
     } else if($(window).width() >= 1000 ){
       $("#lab").css("display", "block")
       $("#computer").css("display", "block")
+      $(".spacer").css("display", "block")
+
     }
-  })
+  }
 
   $('.test, .nav-link, .navbar-brand, .new-button').click(function() {
     var sectionTo = $(this).attr('href');
