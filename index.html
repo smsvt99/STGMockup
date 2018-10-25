@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -20,6 +19,8 @@
 
   <!-- Custom styles for this template -->
   <link href="css/landing-page.min.css" rel="stylesheet">
+
+
 
 </head>
 
@@ -40,7 +41,11 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">Standards. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Regulations. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Features.</h1>
+          <div style="display: flex; flex-direction: row; justify-content: space-around;">
+          <h1 class="mb-5 word">Standards.&nbsp;&nbsp;</h1>
+             <h1 class="mb-5 word">Regulations.&nbsp;&nbsp;</h1> 
+              <h1 class="mb-5 word">Features.&nbsp;&nbsp;</h1>
+          </div>
           <h2 class="mb-5">From industry standards to government regulations</h2>
           <h2 class="mb-5">Make a free account to access our documents</h2>
         </div>
@@ -94,7 +99,9 @@
                   <a href ='#'><b>USOFR</b></a> US Office of the Federal Register</li>
             </ul>
           </div>
-          <img src="img/lab.jpg" class="col-lg-3 order-lg-2 rounded-circle" style="height: 75%; width: 75%; margin-top: 14%"></img>
+          <div class="col-lg-3 order-lg-2">
+          <img src="img/lab.jpg" id="lab" class="img img-fluid rounded-circle" style="width: 400px; height: auto; display: inline; position: relative; top: 35%">
+          </div>
         </div>
       </section>
 
@@ -210,7 +217,9 @@
             across publishers and remember your collections from session to session.</p>
             <div id="onlineAccess"></div>
           </div>
-          <img src="img/computer.jpg" class="col-lg-3 order-lg-2 rounded-circle" style="height:75%; width:75%; margin-top: 21%;"> </img>
+          <div class="col-lg-3 order-lg-2" >
+          <img src="img/computer.jpg" id="computer" class="img img-fluid rounded-circle" style="width: 500px; height: auto; display: inline; position: relative; top: 30%">
+          </div>
       </div>
 
 
@@ -414,6 +423,19 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script>
   
+  $(window).on("resize", function(){
+   
+    if ($(window).width() < 1000){
+      $('#lab').css("display","none")
+      $('#computer').css("display","none")
+      // $('.word').css("fontSize", "5vw")
+   
+    } else if($(window).width() >= 1000 ){
+      $("#lab").css("display", "block")
+      $("#computer").css("display", "block")
+    }
+  })
+
   $('.test, .nav-link, .navbar-brand, .new-button').click(function() {
     var sectionTo = $(this).attr('href');
     $('html, body').animate({
